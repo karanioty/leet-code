@@ -70,4 +70,16 @@ class Solution:
             if j!=0:
                 r1+=" "
         return r1'''
+'''class Solution:
+    def majorityElement(self, nums: List[int]) -> int:
+        m={}
+        for i in range(len(nums)):
+            m[nums[i]]=m.get(nums[i],0)+1
+        k=max(m.values())
+        d=0
+        for i,j in m.items():
+            if j==k:
+                d=i
+                break
+        return d'''
         
